@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+# TODO: add the correct pre-commit rules
+npm lint-staged
