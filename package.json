@@ -10,6 +10,11 @@
     "prepare": "husky install",
     "lint": "eslint --fix --max-warnings=0 --no-ignore --color --ext .ts,.tsx src/"
   },
+  "lint-staged": {
+    "*.(ts|tsx)": [
+      "npm run lint"
+    ]
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {

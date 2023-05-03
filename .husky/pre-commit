@@ -2,4 +2,4 @@
 . "$(dirname -- "$0")/_/husky.sh"
 # TODO: add the correct pre-commit rules 
 # add lint STAGED
-npm run lint
+npx lint-staged
