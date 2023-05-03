@@ -1,1 +1,4 @@
-export const Second = () => <div>Second</div>;
+export const Second = () => {
+  console.log('log');
+  return <div>Second</div>;
+};
