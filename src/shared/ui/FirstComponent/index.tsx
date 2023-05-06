@@ -6,7 +6,7 @@ export const FirstComponent = () => {
   const [value, setValue] = useState(0);
 
   return (
-    <div className={styles.secondWrapper}>
+    <div className={styles['second-wrapper']}>
       <div>{value}</div>
       <div
         onClick={() => {

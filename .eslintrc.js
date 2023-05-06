@@ -5,7 +5,6 @@ const ERROR = 2;
 module.exports = {
   root: true,
 
-  // TODO: revisit env section here
   env: {
     es2022: true,
     node: true,

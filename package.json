@@ -8,11 +8,17 @@
     "start": "cross-env NODE_ENV=development webpack serve --config webpack/develop.config.ts --progress",
     "build": "cross-env NODE_ENV=production webpack --config webpack/production.config.ts",
     "prepare": "husky install",
-    "lint": "eslint --fix --max-warnings=0 --no-ignore --color --ext .ts,.tsx src/"
+    "ts-lint": "eslint --fix --max-warnings=0 --no-ignore --color --ext .ts,.tsx src/",
+    "style-lint": "npx stylelint **/*.css",
+    "lint": "npm run ts-lint && npm run style-lint",
+    "lint_for_lint_staged": "eslint --fix --max-warnings=0 --no-ignore --color"
   },
   "lint-staged": {
     "*.(ts|tsx)": [
-      "npm run lint"
+      "npm run lint_for_lint_staged"
+    ],
+    "*.css": [
+      "npm run style-lint"
     ]
   },
   "author": "",
@@ -58,12 +64,15 @@
     "prettier": "2.8.8",
     "react-refresh": "^0.14.0",
     "style-loader": "^3.3.2",
+    "stylelint": "^15.6.1",
+    "stylelint-config-standard": "^33.0.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4",
     "typescript-plugin-css-modules": "^5.0.1",
     "webpack": "^5.81.0",
     "webpack-bundle-analyzer": "^4.8.0",
     "webpack-cli": "^5.0.2",
+    "webpack-merge": "^5.8.0",
     "xml-loader": "^1.2.1"
   }
 }
