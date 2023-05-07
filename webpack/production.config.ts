@@ -7,7 +7,7 @@ import { merge } from 'webpack-merge';
 import { baseConfig } from './base.config';
 import { paths } from './paths';
 
-// TODO: remove bundle analyzer
+// TODO: add bundle analyzer webpack config for prod
 
 const productionConfig = merge(baseConfig, {
   mode: 'production',
@@ -59,14 +59,7 @@ const productionConfig = merge(baseConfig, {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: [
-                  [
-                    'postcss-preset-env',
-                    {
-                      browsers: 'last 2 versions',
-                    },
-                  ],
-                ],
+                plugins: ['postcss-preset-env'],
               },
             },
           },

@@ -9,6 +9,7 @@ export const FirstComponent = () => {
 
   return (
     <div className={styles.second_wrapper}>
+      <div className={styles.nested}>nested div</div>
       <div>{`Value=${value}`}</div>
       <div
         onClick={() => {

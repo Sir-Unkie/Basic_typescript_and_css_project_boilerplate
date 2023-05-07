@@ -87,5 +87,8 @@
     "webpack-dev-server": "^4.14.0",
     "webpack-merge": "^5.8.0",
     "xml-loader": "^1.2.1"
-  }
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }

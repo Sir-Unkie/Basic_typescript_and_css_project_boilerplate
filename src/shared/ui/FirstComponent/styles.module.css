@@ -4,4 +4,9 @@
 
 .second_wrapper {
   color: purple;
+
+  .nested {
+    font-size: 30px;
+    background-color: blue;
+  }
 }
