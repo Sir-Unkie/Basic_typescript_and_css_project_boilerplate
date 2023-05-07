@@ -9,8 +9,6 @@ import { paths } from './paths';
 
 // TODO: remove bundle analyzer
 
-// TODO: ad postcss loader in production
-
 const productionConfig = merge(baseConfig, {
   mode: 'production',
 
@@ -20,8 +18,6 @@ const productionConfig = merge(baseConfig, {
     clean: true,
     filename: '[name].[contenthash].bundle.js',
     path: paths.appBuild,
-    // TODO: check public path
-    // publicPath:  '/',
   },
 
   optimization: {
@@ -56,7 +52,25 @@ const productionConfig = merge(baseConfig, {
       {
         test: /\.css$/i,
         exclude: /[\\/]node_modules[\\/]/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  [
+                    'postcss-preset-env',
+                    {
+                      browsers: 'last 2 versions',
+                    },
+                  ],
+                ],
+              },
+            },
+          },
+        ],
       },
     ],
   },

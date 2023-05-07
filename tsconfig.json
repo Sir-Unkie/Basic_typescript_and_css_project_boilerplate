@@ -28,7 +28,7 @@
       "@features": ["src/features/index.ts"],
       "@pages": ["src/pages/index.ts"],
       "@widgets": ["src/widgets/index.ts"],
-      "@app": ["src/app/index.ts"],
+      "@app": ["src/app/index.tsx"],
       "@assets": ["src/assets/index.ts"]
     },
     // autocomplete for css modules

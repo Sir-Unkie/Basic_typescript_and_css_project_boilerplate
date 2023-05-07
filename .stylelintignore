@@ -1,4 +1,5 @@
-build/**
-husky/**
-node_modules/**
-webpack/**
+/build/**
+/husky/**
+/node_modules/**
+/webpack/**
+/coverage

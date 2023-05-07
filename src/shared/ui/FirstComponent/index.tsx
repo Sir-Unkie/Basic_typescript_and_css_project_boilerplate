@@ -1,13 +1,15 @@
 import { useState } from 'react';
 
+import { Second } from '@shared';
+
 import styles from './styles.module.css';
 
 export const FirstComponent = () => {
   const [value, setValue] = useState(0);
 
   return (
-    <div className={styles['second-wrapper']}>
-      <div>{value}</div>
+    <div className={styles.second_wrapper}>
+      <div>{`Value=${value}`}</div>
       <div
         onClick={() => {
           setValue((prevValue) => prevValue + 1);
@@ -15,6 +17,7 @@ export const FirstComponent = () => {
       >
         increase
       </div>
+      <Second />
     </div>
   );
 };

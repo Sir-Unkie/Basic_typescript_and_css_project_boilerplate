@@ -1,1 +1,1 @@
-export { FirstComponent } from './ui';
+export * from './ui';

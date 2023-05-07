@@ -2,6 +2,8 @@ const OFF = 0;
 const WARN = 1;
 const ERROR = 2;
 
+// TODO: add FSD lint rules if needed
+
 module.exports = {
   root: true,
 
