@@ -1,13 +1,10 @@
 import * as CompressionPlugin from 'compression-webpack-plugin';
 import * as CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 import * as MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { merge } from 'webpack-merge';
 
 import { baseConfig } from './base.config';
 import { paths } from './paths';
-
-// TODO: add bundle analyzer webpack config for prod
 
 const productionConfig = merge(baseConfig, {
   mode: 'production',
@@ -74,7 +71,6 @@ const productionConfig = merge(baseConfig, {
       filename: '[name].[contenthash].css',
       chunkFilename: '[name].[contenthash].css',
     }),
-    new BundleAnalyzerPlugin(),
   ],
 });
 
