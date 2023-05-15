@@ -17,7 +17,10 @@ export const render = (
   ui: React.ReactElement,
   {
     preloadedState,
-    store = configureStore({ reducer: rootReducer, preloadedState }),
+    store = configureStore({
+      reducer: rootReducer,
+      preloadedState,
+    }),
     ...renderOptions
   }: IRenderOptions = {},
 ) => {

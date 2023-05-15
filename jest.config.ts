@@ -26,7 +26,7 @@ const jestConfig: Config = {
     '^@features(.*)$': '<rootDir>/src/features$1',
     '^@pages(.*)$': '<rootDir>/src/pages$1',
     '^@widgets(.*)$': '<rootDir>/src/widgets$1',
-    '^@app":(.*)$': '<rootDir>/src/app$1',
+    '^@app(.*)$': '<rootDir>/src/app$1',
     '\\.(css|less|scss)$': 'identity-obj-proxy',
   },
   reporters: ['default'],

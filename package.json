@@ -7,7 +7,7 @@
     "start": "cross-env NODE_ENV=development webpack serve --config webpack/develop.config.ts --progress",
     "build": "cross-env NODE_ENV=production webpack --config webpack/production.config.ts",
     "test": "jest --coverage",
-    "test:watch": "./node_modules/.bin/jest --watch",
+    "test:watch": "jest --watch",
     "lint": "npm run ts-lint && npm run style-lint",
     "ts-lint": "eslint --fix --max-warnings=0 --no-ignore --color --ext .ts,.tsx src/",
     "style-lint": "npx stylelint **/*.css",
