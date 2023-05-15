@@ -11,8 +11,6 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 dotEnvConfig();
 
-// TODO: add font somewhere
-
 export const baseConfig: Configuration = {
   context: paths.appSrc,
 
@@ -55,9 +53,13 @@ export const baseConfig: Configuration = {
           },
         },
       },
-      // TODO: check that local images are loaded
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        use: [{ loader: '@svgr/webpack', options: { icon: true } }],
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif)$/i,
         exclude: /[\\/]node_modules[\\/]/,
         type: 'asset/resource',
       },

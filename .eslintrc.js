@@ -138,32 +138,37 @@ module.exports = {
           // 	position: 'before',
           // },
           {
-            pattern: '@shared',
+            pattern: '@app/**',
             group: 'internal',
             position: 'before',
           },
           {
-            pattern: '@entities',
+            pattern: '@pages/**',
             group: 'internal',
             position: 'before',
           },
           {
-            pattern: '@features',
+            pattern: '@widgets/**',
             group: 'internal',
             position: 'before',
           },
           {
-            pattern: '@widgets',
+            pattern: '@features/**',
             group: 'internal',
             position: 'before',
           },
           {
-            pattern: '@pages',
+            pattern: '@entities/**',
             group: 'internal',
             position: 'before',
           },
           {
-            pattern: '@app',
+            pattern: '@shared/**',
+            group: 'internal',
+            position: 'before',
+          },
+          {
+            pattern: '@assets/**',
             group: 'internal',
             position: 'before',
           },

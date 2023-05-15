@@ -23,13 +23,13 @@
     "useUnknownInCatchVariables": true,
     "target": "es5",
     "paths": {
-      "@shared": ["src/shared/index.ts"],
-      "@entities": ["src/entities/index.ts"],
-      "@features": ["src/features/index.ts"],
-      "@pages": ["src/pages/index.ts"],
-      "@widgets": ["src/widgets/index.ts"],
-      "@app": ["src/app/index.tsx"],
-      "@assets": ["src/assets/index.ts"]
+      "@shared/*": ["src/shared/*"],
+      "@entities/*": ["src/entities/*"],
+      "@features/*": ["src/features/*"],
+      "@pages/*": ["src/pages/*"],
+      "@widgets/*": ["src/widgets/*"],
+      "@app/*": ["src/app/*"],
+      "@assets/*": ["src/assets/*"]
     },
     // autocomplete for css modules
     "plugins": [{ "name": "typescript-plugin-css-modules" }]

@@ -1,10 +1,14 @@
-import { FirstComponent } from '@shared';
+import { Provider } from 'react-redux';
 
-// TODO: add global css reset
+import { CountWidget } from '@widgets/counter';
+
+import { store } from './reduxProvider/index';
+
+import './globalCss/reset.css';
+import './globalCss/fonts.css';
 
 export const App = () => (
-  <>
-    <div> APP</div>;
-    <FirstComponent />
-  </>
+  <Provider store={store}>
+    <CountWidget />
+  </Provider>
 );

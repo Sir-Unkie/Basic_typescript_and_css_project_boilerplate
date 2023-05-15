@@ -12,6 +12,7 @@
       {
         "message": "Expected custom property name to be snake case (underscore_case)"
       }
-    ]
+    ],
+    "font-family-name-quotes": "always-unless-keyword"
   }
 }

@@ -1,0 +1,9 @@
+.buttons_wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  cursor: pointer;
+  user-select: none;
+}

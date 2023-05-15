@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client';
 
-import { App } from '@app';
+import { App } from '@app/index';
 
 const rootDiv = document.getElementById('root');
 

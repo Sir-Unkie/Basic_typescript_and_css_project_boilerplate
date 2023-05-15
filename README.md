@@ -1,11 +1,32 @@
-<!-- TODO: add styling to MD file -->
-
 # Starter project boilerplate with:
 
+### js:
+
 - typescript
+- eslint
+- babel
+
+### css
+
 - css modules
 - css modules classes autocomplete
+- postcss
+- stylelint
+
+### state management
+
+- redux
+- redux-toolkit
+
+### testing
+
 - jest
 - react testing library
-- postcss
-- FSD
+
+### architecture
+
+- Feature Sliced Design
+
+### other
+
+- husky pre-commit and pre-push hooks
