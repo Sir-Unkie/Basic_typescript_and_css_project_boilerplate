@@ -8,7 +8,6 @@ import './globalCss/reset.css';
 import './globalCss/fonts.css';
 
 // TODO zhdi:
-// 1. Update all dependencies
 // 2. Migrate to feature-based architecture
 // 3. Rename files so index doesnt containt component
 // 4. Add Router
