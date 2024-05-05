@@ -1,13 +1,12 @@
 import * as path from 'path';
 
-import * as CopyWebpackPlugin from 'copy-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 import { config as dotEnvConfig } from 'dotenv';
-import * as HtmlWebpackPlugin from 'html-webpack-plugin';
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { Configuration, DefinePlugin } from 'webpack';
 
 import { paths } from './paths';
-
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 dotEnvConfig();
 

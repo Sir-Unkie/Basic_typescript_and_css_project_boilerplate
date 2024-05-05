@@ -1,6 +1,6 @@
-import * as CompressionPlugin from 'compression-webpack-plugin';
-import * as CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
-import * as MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import CompressionPlugin from 'compression-webpack-plugin';
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { merge } from 'webpack-merge';
 
 import { baseConfig } from './base.config';

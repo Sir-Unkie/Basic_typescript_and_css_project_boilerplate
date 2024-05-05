@@ -1,8 +1,4 @@
-export enum EReducersNames {
-  COUNTER = 'COUNTER',
-}
-
-export enum EDataRequestStatus {
+export enum RequestStatus {
   idle = 'idle',
   pending = 'pending',
   fulfilled = 'fulfilled',

@@ -1,11 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { EDataRequestStatus } from '@shared/constants';
+import { RequestStatus } from '@shared/constants';
 import { IGenericStoreDataState } from '@shared/types';
 
 const initialState: IGenericStoreDataState<number> = {
   data: null,
-  dataRequestStatus: EDataRequestStatus.idle,
+  dataRequestStatus: RequestStatus.idle,
 };
 
 export const counterSlice = createSlice({
