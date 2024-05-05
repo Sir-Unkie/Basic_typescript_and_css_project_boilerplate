@@ -8,11 +8,11 @@ import './globalCss/reset.css';
 import './globalCss/fonts.css';
 
 // TODO zhdi:
-// 1. Add Radix library for UI components
+// 1. Update all dependencies
 // 2. Add Router
-// 3. Add lefthook and set it up
-// 4. Migrate to feature-based architecture
-// 5. Update all dependencies
+// 4. Add lefthook and set it up
+// 3. Add Radix library for UI components
+// 5. Migrate to feature-based architecture
 // 6. Migrate to TSC
 
 export const App = () => (

@@ -1,15 +1,11 @@
-import {
-  configureStore,
-  PreloadedState,
-  EnhancedStore,
-} from '@reduxjs/toolkit';
+import { configureStore, EnhancedStore } from '@reduxjs/toolkit';
 import { render as rtlRender, RenderOptions } from '@testing-library/react';
 import { Provider } from 'react-redux';
 
-import { rootReducer } from '@app/reduxProvider';
+import { rootReducer, RootState } from '@app/reduxProvider';
 
 interface IRenderOptions extends Omit<RenderOptions, 'queries'> {
-  preloadedState?: PreloadedState<any>;
+  preloadedState?: Partial<RootState>;
   store?: EnhancedStore;
 }
 
