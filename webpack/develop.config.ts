@@ -37,6 +37,8 @@ const developConfig = merge(baseConfig, {
       overlay: true,
       progress: true,
     },
+
+    // proxy: [proxyConfig],
   },
 
   module: {
@@ -50,8 +52,6 @@ const developConfig = merge(baseConfig, {
   },
 
   plugins: [new ReactRefreshPlugin()],
-
-  // proxy: proxyConfig,
 });
 
 export default developConfig;

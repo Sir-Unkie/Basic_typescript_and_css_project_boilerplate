@@ -44,7 +44,8 @@ module.exports = {
     'no-underscore-dangle': [ERROR, { allowAfterThis: true }],
 
     // оператор всегда впереди при переносе выражений на новую строку
-    'operator-linebreak': [ERROR, 'before'],
+    // Отключил, поскольку стилем должен управлять prettier
+    'operator-linebreak': OFF,
 
     // ++ только для for-цикла
     'no-plusplus': [ERROR, { allowForLoopAfterthoughts: true }],
@@ -57,6 +58,9 @@ module.exports = {
 
     // Предупреждение о неиспользуемых переменных
     '@typescript-eslint/no-unused-vars': WARN,
+
+    // Предупреждение о лишних условиях
+    '@typescript-eslint/no-unnecessary-condition': ERROR,
 
     // Отключение отступов тайпскрипт для работы приттиера
     '@typescript-eslint/indent': OFF,

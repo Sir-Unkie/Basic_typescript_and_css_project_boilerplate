@@ -8,7 +8,12 @@ import { Configuration, DefinePlugin } from 'webpack';
 
 import { paths } from './paths';
 
-dotEnvConfig();
+const envFilePath =
+  process.env.NODE_ENV === 'development' ? paths.appDevEnv : paths.appProdEnv;
+
+// TODO zhdi: in NODE version 20 and higher dotEnv is no longer needed, node js can read env files
+// node env file path should be set via script and node command - just google it
+dotEnvConfig({ path: envFilePath });
 
 export const baseConfig: Configuration = {
   context: paths.appSrc,

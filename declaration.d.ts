@@ -1,3 +1,10 @@
+declare namespace NodeJS {
+  export interface ProcessEnv {
+    PORT?: string;
+    NODE_ENV?: 'development' | 'production';
+  }
+}
+
 declare module '*.css';
 
 declare module '*.module.css' {
