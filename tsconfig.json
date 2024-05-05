@@ -1,4 +1,11 @@
 {
+  // ts-node setting is used so we can use node CommonJs resolution for webpack config files (to use ts and imports statements) and also set in regular TS config module to ESNext
+  // https://webpack.js.org/configuration/configuration-languages/#typescript
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
   "compilerOptions": {
     "baseUrl": ".",
     "jsx": "react-jsx",
@@ -7,9 +14,13 @@
     // ESNext: This setting ensures that TypeScript outputs the latest supported JavaScript module syntax
     // ES6/ES2015 - If you want to ensure compatibility with a slightly older ecosystem without transpilation, this might be a safe choice.
     // if picked ESNext - need to replace in webpack config all imports with require statements and other minor changes
-    "module": "NodeNext",
+    "module": "ESNext",
 
-    "moduleResolution": "NodeNext",
+    "moduleResolution": "Node",
+
+    // "target": es5 - for older browsers support, may be slower, could be set to es6 for better performance but now wide browsers versions support
+    // alse ES6 supports tree shaking, and es5 - not, so if its possible - use es6
+    "target": "ES6",
 
     // Ensure that .d.ts files are created by tsc, but not .js files
     // declaration - as soon as this is internal app and not published as library to be consumed, i dont really need declaration files, so can set to false
@@ -29,11 +40,8 @@
     "allowUnreachableCode": false,
     "useUnknownInCatchVariables": true,
 
-    // "target": es5 - for older browsers support, may be slower, could be set to es6 for better performance but now wide browsers versions support
-    "target": "es5",
-
     // skipLibCheck - in prod build - false, in dev - true for faster compiling
-    "skipLibCheck": true,
+    "skipLibCheck": false,
 
     // esModuleInterop - Enables compatibility with non-ES module spec compliant imports.
     // This is generally recommended to be set to true, especially in a React application where you might be importing a mix of CommonJS and ES Modules. It simplifies importing modules without having to worry about the differences between the module systems
@@ -58,7 +66,8 @@
     "*.d.ts",
     "*.spec.tsx",
     "src/index.tsx",
-    "webpack/**.ts"
+    "webpack/**.ts",
+    "webpack/**/*"
   ],
   "exclude": ["build", "node_modules"]
 }

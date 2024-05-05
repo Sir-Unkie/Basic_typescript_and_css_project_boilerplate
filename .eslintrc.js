@@ -55,6 +55,9 @@ module.exports = {
     // При возможности удаление у стрелочных функций излишних скобок
     'arrow-body-style': [ERROR, 'as-needed'],
 
+    // Предупреждение о неиспользуемых переменных
+    '@typescript-eslint/no-unused-vars': WARN,
+
     // Отключение отступов тайпскрипт для работы приттиера
     '@typescript-eslint/indent': OFF,
 
