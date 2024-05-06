@@ -1,7 +1,8 @@
 import { screen } from '@testing-library/react';
 
-import { render } from '@shared/lib';
-import { ValueViewer } from '@shared/ui';
+import { render } from '@shared/utils';
+
+import { ValueViewer } from '..';
 
 const renderFirstComponent = () => render(<ValueViewer value={0} />);
 

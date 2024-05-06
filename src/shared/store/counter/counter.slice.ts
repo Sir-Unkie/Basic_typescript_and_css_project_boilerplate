@@ -1,9 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 import { RequestStatus } from '@shared/constants';
-import { IGenericStoreDataState } from '@shared/types';
+import { GenericState } from '@shared/types';
 
-const initialState: IGenericStoreDataState<number> = {
+const initialState: GenericState<number> = {
   data: null,
   dataRequestStatus: RequestStatus.idle,
 };
@@ -20,9 +20,7 @@ export const counterSlice = createSlice({
     },
   },
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  extraReducers: (builder) => {},
+  extraReducers: (_builder) => {},
 });
 
 export const { increment, decrement } = counterSlice.actions;
-
-export type TCounterState = ReturnType<typeof counterSlice.reducer>;
