@@ -28,10 +28,8 @@ export const baseConfig: Configuration = {
   resolve: {
     alias: {
       '@shared': path.resolve(paths.appSrc, 'shared'),
-      '@entities': path.resolve(paths.appSrc, 'entities'),
       '@features': path.resolve(paths.appSrc, 'features'),
       '@pages': path.resolve(paths.appSrc, 'pages'),
-      '@widgets': path.resolve(paths.appSrc, 'widgets'),
       '@app': path.resolve(paths.appSrc, 'app'),
       '@assets': path.resolve(paths.appSrc, 'assets'),
     },

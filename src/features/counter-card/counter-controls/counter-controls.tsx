@@ -1,8 +1,7 @@
-import { decrement, increment } from '@entities/count';
+import { decrement, increment } from '@shared/store/counter';
+import { useAppDispatch } from '@shared/utils';
 
-import { useAppDispatch } from '@shared/lib';
-
-import styles from './styles.module.css';
+import styles from './counter-controls.module.css';
 
 export const CounterControls = () => {
   const dispatch = useAppDispatch();

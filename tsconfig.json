@@ -48,10 +48,8 @@
     "esModuleInterop": true,
     "paths": {
       "@shared/*": ["src/shared/*"],
-      "@entities/*": ["src/entities/*"],
       "@features/*": ["src/features/*"],
       "@pages/*": ["src/pages/*"],
-      "@widgets/*": ["src/widgets/*"],
       "@app/*": ["src/app/*"],
       "@assets/*": ["src/assets/*"]
     },
